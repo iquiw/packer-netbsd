@@ -39,6 +39,17 @@
       "boot_wait": "40s"
     }
   ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "environment_vars": [
+        "HOME_DIR=/home/vagrant"
+      ],
+      "scripts": [
+        "scripts/vagrant.sh"
+      ]
+    }
+  ],
   "post-processors": [
     {
       "type": "vagrant",
