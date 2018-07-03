@@ -7,6 +7,9 @@ usage()
 }
 
 case $# in
+1)	;;
+*)	usage
+	;;
 esac
 
 case $1 in
