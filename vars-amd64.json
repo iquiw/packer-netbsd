@@ -1,6 +1,6 @@
 {
   "arch": "amd64",
-  "iso_url": "https://cdn.netbsd.org/pub/NetBSD/images/8.0_RC2/NetBSD-8.0_RC2-amd64.iso",
-  "iso_checksum": "ff80fe569487d98b9f517e7c16a8b239dd4203192f9664e13bcc8582045861df5b0f6ac1acbd6711730c70a512089c716d49a6776c051a0eef8aba3947c0c593",
+  "iso_url": "https://cdn.netbsd.org/pub/NetBSD/images/8.0/NetBSD-8.0-amd64.iso",
+  "iso_checksum": "39d7988393d48f25074e206d48aa882eacf9c318c50832a04e50de24ae5a45d0eae691eb23c3afe404c10e721ab45951dcdeb0dddfb8d545dc828fc69008033a",
   "os_type": "NetBSD_64"
 }

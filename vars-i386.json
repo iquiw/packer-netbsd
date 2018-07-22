@@ -1,6 +1,6 @@
 {
   "arch": "i386",
-  "iso_url": "https://cdn.netbsd.org/pub/NetBSD/images/8.0_RC2/NetBSD-8.0_RC2-i386.iso",
-  "iso_checksum": "b535afea07a913fde87e67a90e338fa8bab94a7930d984763f6277a3511692a6ba16030ccf35e247d80b42f1917772cb10d90c1aff8d69cf8e043021c1319524",
+  "iso_url": "https://cdn.netbsd.org/pub/NetBSD/images/8.0/NetBSD-8.0-i386.iso",
+  "iso_checksum": "b08497b71a4031538a76ce8e5289de4047f55c4733457b3d1e84b905f4371dd622edf459bea663a528787eb2ee21b3775b8e05fe1563b1f1bbf72ddccd117262",
   "os_type": "NetBSD"
 }
