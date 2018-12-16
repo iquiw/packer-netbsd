@@ -2,15 +2,21 @@
 
 usage()
 {
-	echo "usage: $0 (amd64|i386)" 1>&2
+	echo "usage: $0 [-qemu] (amd64|i386)" 1>&2
 	exit 1
 }
 
 case $# in
-1)	;;
+[12])	;;
 *)	usage
 	;;
 esac
+
+qemu=
+if [ "$1" = -qemu ]; then
+	qemu=-qemu
+	shift
+fi
 
 case $1 in
 amd64)	arch=amd64 ;;
@@ -20,4 +26,4 @@ i386)	arch=i386 ;;
 	;;
 esac
 
-packer build -var-file "vars-$arch.json" netbsd.json
+echo packer build -var-file "vars-$arch.json" "netbsd$qemu.json"
