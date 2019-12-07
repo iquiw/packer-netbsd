@@ -1,0 +1,40 @@
+* Packer NetBSD
+
+#+NAME: version
+: 9.0_RC1
+
+#+BEGIN_SRC emacs-lisp :var version=version :results silent
+(require 'json)
+
+(defun netbsd-get-os-type (arch)
+  (if (equal arch "amd64")
+      "NetBSD_64"
+    "NetBSD"))
+
+(defun netbsd-get-iso-sha512 (version arch)
+  (goto-char (point-min))
+  (when (re-search-forward (format "(NetBSD-%s-%s.iso) = \\(.*\\)" version arch) nil t)
+    (match-string 1)))
+
+(defun netbsd-write-json (version arch checksum)
+  (let ((json-encoding-pretty-print t))
+    (json-encode
+     (list (cons "arch" arch)
+           (cons "iso_url" (format "https://cdn.netbsd.org/pub/NetBSD/images/%s/NetBSD-%s-%s.iso"
+                                   version version arch))
+           (cons "iso_checksum" checksum)
+           (cons "os_type" (netbsd-get-os-type arch))))))
+
+(defun netbsd-gen-json (version arch)
+  (let ((checksum (netbsd-get-iso-sha512 version arch)))
+    (if checksum
+        (with-temp-buffer
+          (insert (netbsd-write-json version arch checksum))
+          (write-file (format "vars-%s.json" arch)))
+      (message "No checksum found!"))))
+
+(let ((url (format "https://cdn.netbsd.org/pub/NetBSD/NetBSD-%s/images/SHA512" version)))
+  (with-current-buffer (url-retrieve-synchronously url)
+    (netbsd-gen-json version "amd64")
+    (netbsd-gen-json version "i386")))
+#+END_SRC
