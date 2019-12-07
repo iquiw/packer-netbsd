@@ -16,19 +16,18 @@
         "<enter><wait10ms>",
         "<down><enter><wait10ms>",
         "<enter><wait10ms>",
-        "<enter><wait10ms>",
         "<down><enter><wait10ms>",
         "<enter><wait10ms>",
         "<down><enter><wait10ms>",
-        "<enter><wait10ms>",
-        "<enter><wait10ms>",
-        "<down><enter><wait10s>",
-        "<enter><enter><wait10ms>",
         "<down><enter><wait10ms>",
-        "<enter><wait30s>",
+        "<enter><wait10ms>",
+        "<down><enter><wait3s>",
+        "<enter><wait10ms>",
+        "<down><enter><wait10ms>",
+        "<enter><wait50s>",
         "<enter><wait10ms>",
         "a<enter><wait10ms><enter><wait10ms><enter><wait10ms><enter><wait10ms><wait15s>",
-        "vagrant.local<enter><wait10ms><enter><wait10ms><enter><wait10ms>",
+        "<enter><wait10ms><enter><wait10ms>",
         "g<enter><wait10ms>",
         "o<enter><wait10ms>vagrant<enter><wait10ms><enter><wait10ms>b<enter><wait10ms>",
         "vagrant<enter><wait10ms>vagrant<enter><wait10ms>vagrant<enter><wait3s>",
@@ -36,7 +35,7 @@
         "<enter><wait1s>",
         "d<enter><wait10ms>"
       ],
-      "boot_wait": "40s"
+      "boot_wait": "30s"
     }
   ],
   "provisioners": [
