@@ -26,4 +26,4 @@ i386)	arch=i386 ;;
 	;;
 esac
 
-echo packer build -var-file "vars-$arch.json" "netbsd$qemu.json"
+packer build -var-file "vars-$arch.json" "netbsd$qemu.json"
