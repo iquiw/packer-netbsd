@@ -1,7 +1,7 @@
 * Packer NetBSD
 
 #+NAME: version
-: 9.0_RC1
+: 9.2
 
 #+BEGIN_SRC emacs-lisp :var version=version :results silent
 (require 'json)
