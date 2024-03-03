@@ -8,7 +8,11 @@
       "ssh_password": "passw0rd",
       "shutdown_command": "su root -c '/sbin/shutdown -p now'",
       "disk_size": 10240,
-      "qemu_binary": "qemu-system-{{user `arch`}}",
+      "qemu_binary": "qemu-system-{{user `arch_qemu`}}",
+      "qemuargs": [
+        ["-machine", "accel=nvmm"]
+      ],
+      "display": "sdl",
       "format": "qcow2",
       "vm_name": "netbsd-{{user `arch`}}",
       "net_device": "virtio-net",
@@ -20,24 +24,23 @@
         "<down><enter><wait10ms>",
         "<enter><wait10ms>",
         "<enter><wait10ms>",
-        "<down><enter><wait10ms>",
         "<enter><wait10ms>",
         "<down><enter><wait10ms>",
-        "<enter><wait10ms>",
         "<enter><wait10ms>",
         "<down><enter><wait10s>",
-        "<enter><enter><wait10ms>",
+        "<enter><wait1s>",
         "<down><enter><wait10ms>",
         "<enter><wait120s>",
         "<enter><wait10ms>",
-        "a<enter><wait10ms><enter><wait10ms><enter><wait10ms><enter><wait10ms><wait20s>",
-        "netbsd-qemu-{{user `arch`}}.local<enter><wait10ms><enter><wait10ms><enter><wait10ms>",
+        "<enter><wait3s>",
+        "a<enter><wait1s><enter><wait1s><enter><wait1s><enter><wait10ms><wait20s>",
+        "netbsd-qemu-{{user `arch`}}.local<enter><wait10ms><enter><wait10ms><enter><wait10ms><enter><wait10ms>",
         "g<enter><wait10ms>",
         "o<enter><wait10ms>qemu<enter><wait10ms><enter><wait10ms>b<enter><wait5s>",
         "passw0rd<enter><wait10ms>passw0rd<enter><wait5s>",
-        "x<enter><wait1s>",
+        "x<enter><wait10ms>",
         "<enter><wait5s>",
-        "d<enter>"
+        "d<enter><wait10ms>"
       ],
       "boot_wait": "40s"
     }

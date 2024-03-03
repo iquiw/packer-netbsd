@@ -1,5 +1,6 @@
 {
   "arch": "amd64",
+  "arch_qemu": "x86_64",
   "iso_url": "https://cdn.netbsd.org/pub/NetBSD/images/10.0_RC5/NetBSD-10.0_RC5-amd64.iso",
   "iso_checksum": "0dd122dee80fc604a3bb174ced940d64fb0b5791260c5a4dcca4fe6d3287e7150ac37005af12d19ac2fd3c6dc2df0e32d051ec6a81bd7deafa6ee6ebe4a062af",
   "os_type": "NetBSD_64"

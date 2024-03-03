@@ -20,6 +20,7 @@
   (let ((json-encoding-pretty-print t))
     (json-encode
      (list (cons "arch" arch)
+           (cons "arch_qemu" (if (equal arch "amd64") "x86_64" arch))
            (cons "iso_url" (format "https://cdn.netbsd.org/pub/NetBSD/images/%s/NetBSD-%s-%s.iso"
                                    version version arch))
            (cons "iso_checksum" checksum)
