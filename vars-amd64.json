@@ -1,6 +1,6 @@
 {
   "arch": "amd64",
-  "iso_url": "https://cdn.netbsd.org/pub/NetBSD/images/10.0_RC1/NetBSD-10.0_RC1-amd64.iso",
-  "iso_checksum": "e2d9c2779a460dffc76d3af634da601070718ce62aa99cd81d12f0b8e7672cef124565991fdcbdcb6abdb3ab6ec91f2d6370b3b627e8e216d7b851eed58c4d68",
+  "iso_url": "https://cdn.netbsd.org/pub/NetBSD/images/10.0_RC5/NetBSD-10.0_RC5-amd64.iso",
+  "iso_checksum": "0dd122dee80fc604a3bb174ced940d64fb0b5791260c5a4dcca4fe6d3287e7150ac37005af12d19ac2fd3c6dc2df0e32d051ec6a81bd7deafa6ee6ebe4a062af",
   "os_type": "NetBSD_64"
 }
